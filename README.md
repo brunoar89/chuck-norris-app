@@ -14,4 +14,4 @@ Copy .env.example to .env and configure it.
 
     $ npm start
     
-### 3- Have fun ;)
+### 4- Have fun ;)
