@@ -43,7 +43,7 @@ const Category = ({ match }) => {
         <blockquote className={classes.blockquote}>
           { loading ? <CircularProgress color="inherit" /> : category.value}
         </blockquote>
-        <IconButton onClick={() => on(fetchCategory(params.category))}>
+        <IconButton onClick={() => on(fetchCategory({ category: params.category }))}>
           <RefreshIcon fontSize="large" />
         </IconButton>
       </div>
