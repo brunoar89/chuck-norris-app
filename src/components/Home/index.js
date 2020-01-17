@@ -41,22 +41,20 @@ const Home = () => {
         <Typography variant="h6" align="center" gutterBottom>
           Para cada categoria uma revelação, clique e descubra!
         </Typography>
-        {
-          loading
-            ? <CircularProgress color="inherit" />
-            : (
-              <Box width="100%" align="center">
-                {categories.map(category => (
-                  <Chip
-                    label={category}
-                    className={classes.chip}
-                    key={category}
-                    onClick={() => on(push(`/random/${category}`))}
-                  />
-                ))}
-              </Box>
-          )
-        }
+        {loading
+          ? <CircularProgress color="inherit" />
+          : (
+            <Box width="100%" align="center">
+              {categories.map(category => (
+                <Chip
+                  label={category}
+                  className={classes.chip}
+                  key={category}
+                  onClick={() => on(push(`/random/${category}`))}
+                />
+              ))}
+            </Box>
+        )}
       </div>
     </Container>
   );
