@@ -26,7 +26,7 @@ const Category = ({ match }) => {
   const on = useDispatch();
 
   useEffect(() => {
-    on(fetchCategory(params.category));
+    on(fetchCategory({ category: params.category }));
   }, [on, params.category]);
 
   return (
